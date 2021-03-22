@@ -1,0 +1,5 @@
+---
+- name: ensure qemu and virt-manager are installed
+  apt:
+    name: "{{ qemu_packages + virt_manager }}"
+    state: present

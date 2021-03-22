@@ -1,0 +1,15 @@
+---
+- name: Verify
+  hosts: all
+
+  tasks:
+    - name: Collect package facts.
+      package_facts:
+        manager: "auto"
+
+    - name: Verify qemu is installed.
+      assert:
+        that:
+          - "'qemu' in ansible_facts.packages"
+        success_msg: "qemu is installed."
+        fail_msg: "qemu is not installed."

@@ -1,1 +1,10 @@
 ---
+qemu_packages:
+  - qemu
+  - qemu-kvm
+
+virt_manager:
+  - virt-manager
+  # - libvirt-bin
+  - libvirt-daemon-system
+  - libvirt-clients

@@ -1,0 +1,5 @@
+---
+- name: Install Qemu
+  hosts: all
+  roles:
+    - qemu
